@@ -9,30 +9,31 @@
             font-family: Arial, sans-serif;
             margin: 20px;
             padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
         }
         input[type="text"] {
             width: 200px;
-            padding: 10px;
-            margin: 10px 0;
+            padding: 12px;
+            margin: 25px 0;
+            border-radius: 10px;
         }
         button {
-            padding: 10px 15px;
-            background-color: #28a745;
+            padding: 12px 25px;
+            background-color: #06c;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
         }
         button:hover {
-            background-color: #218838;
+            background-color: rgb(0, 67, 135);
         }
     </style>
 </head>
 <body>
 
-<center><h2>香港身份證號碼檢查</h2></center>
+<center><h2>香港身份證號碼檢查</h2>
 <input type="text" id="idNumber" placeholder="輸入身份證號碼">
 <button onclick="checkID()">檢查</button>
 <p id="result"></p>
@@ -46,10 +47,10 @@
         if (regex.test(idNumber)) {
             result.textContent = "身份證號碼格式正確。";
         } else {
-            result.textContent = "身份證號碼格式不正確，請檢查。";
+            result.textContent = "身份證號碼格式不正確。";
         }
     }
-</script>
+</script></center>
 
 </body>
 </html>
