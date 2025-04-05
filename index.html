@@ -1,6 +1,55 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>香港身份證號碼檢查</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="text"] {
+            width: 200px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello</h1>
+
+<center><h2>香港身份證號碼檢查</h2></center>
+<input type="text" id="idNumber" placeholder="輸入身份證號碼">
+<button onclick="checkID()">檢查</button>
+<p id="result"></p>
+
+<script>
+    function checkID() {
+        const idNumber = document.getElementById('idNumber').value.trim();
+        const regex = /^[A-Z]{1,2}\d{6}\([0-9A]\)$/;
+        const result = document.getElementById('result');
+
+        if (regex.test(idNumber)) {
+            result.textContent = "身份證號碼格式正確。";
+        } else {
+            result.textContent = "身份證號碼格式不正確，請檢查。";
+        }
+    }
+</script>
+
 </body>
 </html>
